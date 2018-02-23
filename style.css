@@ -1,0 +1,179 @@
+.square {
+  margin-top: 10%;
+  margin-left: 5%;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  border: 5px solid #ffb370;
+  transition: all 0.3s ease;
+}
+
+.square::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-top: 5px solid #fc8113;
+  border-left: 5px solid #fc8113;
+}
+.square::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-bottom: 5px solid #fc8113;
+  border-right: 5px solid #fc8113;
+}
+
+.square:hover {
+  background: #ffb370;
+  transform: rotate(45deg);
+}
+
+/* right */
+.right {
+  margin-top: 10%;
+  margin-left: 5%;
+  width: 25px;
+  height: 25px;
+  clear: both;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  border-top: 5px solid #fc8113;
+  border-right: 5px solid #fc8113;
+  transition: all 0.5s ease-in-out;
+  transform: rotate(45deg);
+}
+.right::after {
+  content: "";
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top: 5px solid #f5af71;
+  border-right: 5px solid #f5af71;
+  transition: all 0.5s ease;
+}
+
+.right::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border-top: 5px solid #f7d8bd;
+  border-right: 5px solid #f7d8bd;
+  transition: all 0.5s ease;
+}
+
+.right:hover::after {
+  right: 10px;
+  top: 10px;
+}
+
+.right:hover::before {
+  right: 25px;
+  top: 25px;
+}
+/* right*/
+
+/* fillup*/
+
+.fillup {
+  margin-top: 10%;
+  margin-left: 5%;
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.fillup::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-top: 5px solid #fc131f;
+  border-left: 5px solid #fc131f;
+  transition: all 0.3s ease;
+}
+.fillup::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-bottom: 5px solid #fc131f;
+  border-right: 5px solid #fc131f;
+  transition: all 0.3s ease;
+}
+.fillup:hover {
+  transform: rotate(-45deg) scale(1.1);
+  background: #fc131f;
+}
+.fillup:hover::after,
+.fillup:hover::before {
+  width: 85px;
+  height: 85px;
+}
+
+/*glimmer */
+
+.glimmer {
+  display: inline-block;
+  position: relative;
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 200px;
+  height: 80px;
+  background: #cae777;
+  transition: all 0.8s ease;
+}
+
+.glimmer::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 80px;
+  background: #74a04c;
+  transition: all 0.6s ease;
+}
+
+.glimmer::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  width: 0px;
+  height: 80px;
+  background: #46853d ;
+  transition: all 1.3s ease;
+}
+
+
+.glimmer:hover::after{
+    right: 0;
+    width: 100%;
+}
+.glimmer:hover::before{
+    right: 0;
+    width: 100%;
+}
